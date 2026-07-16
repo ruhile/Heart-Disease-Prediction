@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.env
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Data & Models
+models/
+*.joblib
+*.pkl
+*.pkl.gz
+
+# Exclude generated/preprocessed data files but keep the raw dataset
+data/*
+!data/heart_disease_uci.csv
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# VS Code / IDEs
+.vscode/
+.idea/
