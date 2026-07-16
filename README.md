@@ -11,13 +11,19 @@ Heart-Disease-Prediction/
 │
 ├── data/
 │   ├── heart_disease_uci.csv   # Combined UCI Heart Disease dataset (920 patients)
-│   └── heart_clean_day1.csv    # Cleaned dataset saved at the end of Day 1
+│   ├── heart_clean_day1.csv    # Day 1 cleaned dataset (unnecessary columns dropped)
+│   ├── heart_processed.csv     # Day 2 preprocessed dataset (imputed & encoded)
+│   ├── X_train.npy             # Scaled training features (NumPy array)
+│   ├── X_test.npy              # Scaled testing features (NumPy array)
+│   ├── y_train.npy             # Training target labels (NumPy array)
+│   └── y_test.npy              # Testing target labels (NumPy array)
 │
 ├── notebooks/
 │   ├── heart_disease_eda.ipynb           # Jupyter notebook for Exploratory Data Analysis (Day 1)
 │   └── heart_disease_preprocessing.ipynb # Jupyter notebook for Data Preprocessing (Day 2)
 │
-├── src/                        # Source code for preprocessing and modeling
+├── src/                        # Source code directory for programmatic steps
+│   └── preprocess.py           # Preprocessing and scaling module pipeline
 │
 ├── images/                     # Saved plots and visual assets
 │
@@ -41,14 +47,19 @@ Run the following command to install the required Python packages:
 pip install -r requirements.txt
 ```
 
-### 3. Exploratory Data Analysis & Preprocessing
-Launch Jupyter Notebook to explore the steps:
+### 3. Running EDA & Preprocessing
+To run the notebooks:
 ```bash
 # To run EDA
 jupyter notebook notebooks/heart_disease_eda.ipynb
 
 # To run Preprocessing
 jupyter notebook notebooks/heart_disease_preprocessing.ipynb
+```
+
+To execute the preprocessing programmatically:
+```bash
+python src/preprocess.py
 ```
 
 ---
