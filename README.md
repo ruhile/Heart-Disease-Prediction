@@ -19,13 +19,20 @@ Heart-Disease-Prediction/
 │   └── y_test.npy              # Testing target labels (NumPy array)
 │
 ├── notebooks/
-│   ├── heart_disease_eda.ipynb           # Jupyter notebook for Exploratory Data Analysis (Day 1)
-│   └── heart_disease_preprocessing.ipynb # Jupyter notebook for Data Preprocessing (Day 2)
+│   ├── heart_disease_eda.ipynb                 # Jupyter notebook for Exploratory Data Analysis (Day 1)
+│   ├── heart_disease_preprocessing.ipynb       # Jupyter notebook for Data Preprocessing (Day 2)
+│   └── heart_disease_logistic_regression.ipynb # Jupyter notebook for Logistic Regression (Day 3)
 │
 ├── src/                        # Source code directory for programmatic steps
-│   └── preprocess.py           # Preprocessing and scaling module pipeline
+│   ├── preprocess.py           # Preprocessing and scaling module pipeline
+│   └── train.py                # Logistic Regression model training script
+│
+├── models/                     # Saved model artifacts
+│   └── logistic_regression_model.joblib # Saved trained model weights
 │
 ├── images/                     # Saved plots and visual assets
+│   ├── confusion_matrix.png    # Plotted Confusion Matrix evaluation plot
+│   └── feature_importance.png   # Plotted Logistic Regression coefficients significance plot
 │
 ├── README.md                   # Project documentation
 │
@@ -47,19 +54,26 @@ Run the following command to install the required Python packages:
 pip install -r requirements.txt
 ```
 
-### 3. Running EDA & Preprocessing
+### 3. Running EDA, Preprocessing & Modeling
 To run the notebooks:
 ```bash
-# To run EDA
+# Day 1 - EDA
 jupyter notebook notebooks/heart_disease_eda.ipynb
 
-# To run Preprocessing
+# Day 2 - Preprocessing
 jupyter notebook notebooks/heart_disease_preprocessing.ipynb
+
+# Day 3 - Logistic Regression
+jupyter notebook notebooks/heart_disease_logistic_regression.ipynb
 ```
 
-To execute the preprocessing programmatically:
+To run the pipeline scripts programmatically:
 ```bash
+# Run preprocessing
 python src/preprocess.py
+
+# Run model training
+python src/train.py
 ```
 
 ---
