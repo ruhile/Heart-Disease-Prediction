@@ -10,10 +10,12 @@ An end-to-end Machine Learning project to predict the presence and severity of h
 Heart-Disease-Prediction/
 │
 ├── data/
-│   └── heart_disease_uci.csv   # Combined UCI Heart Disease dataset (920 patients)
+│   ├── heart_disease_uci.csv   # Combined UCI Heart Disease dataset (920 patients)
+│   └── heart_clean_day1.csv    # Cleaned dataset saved at the end of Day 1
 │
 ├── notebooks/
-│   └── heart_disease_eda.ipynb # Jupyter notebook for Exploratory Data Analysis
+│   ├── heart_disease_eda.ipynb           # Jupyter notebook for Exploratory Data Analysis (Day 1)
+│   └── heart_disease_preprocessing.ipynb # Jupyter notebook for Data Preprocessing (Day 2)
 │
 ├── src/                        # Source code for preprocessing and modeling
 │
@@ -39,10 +41,14 @@ Run the following command to install the required Python packages:
 pip install -r requirements.txt
 ```
 
-### 3. Exploratory Data Analysis
-Launch Jupyter Notebook to explore the dataset:
+### 3. Exploratory Data Analysis & Preprocessing
+Launch Jupyter Notebook to explore the steps:
 ```bash
+# To run EDA
 jupyter notebook notebooks/heart_disease_eda.ipynb
+
+# To run Preprocessing
+jupyter notebook notebooks/heart_disease_preprocessing.ipynb
 ```
 
 ---
