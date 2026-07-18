@@ -13,6 +13,7 @@ Heart-Disease-Prediction/
 │   ├── heart_disease_uci.csv   # Combined UCI Heart Disease dataset (920 patients)
 │   ├── heart_clean_day1.csv    # Day 1 cleaned dataset (unnecessary columns dropped)
 │   ├── heart_processed.csv     # Day 2 preprocessed dataset (imputed & encoded)
+│   ├── model_comparison.csv    # Day 6 tabular model metrics comparison CSV
 │   ├── X_train.npy             # Scaled training features (NumPy array)
 │   ├── X_test.npy              # Scaled testing features (NumPy array)
 │   ├── y_train.npy             # Training target labels (NumPy array)
@@ -22,7 +23,8 @@ Heart-Disease-Prediction/
 │   ├── heart_disease_eda.ipynb                 # Jupyter notebook for Exploratory Data Analysis (Day 1)
 │   ├── heart_disease_preprocessing.ipynb       # Jupyter notebook for Data Preprocessing (Day 2)
 │   ├── heart_disease_logistic_regression.ipynb # Jupyter notebook for Logistic Regression (Day 3)
-│   └── heart_disease_decision_tree.ipynb       # Jupyter notebook for Decision Tree Classifier (Day 4)
+│   ├── heart_disease_decision_tree.ipynb       # Jupyter notebook for Decision Tree Classifier (Day 4)
+│   └── heart_disease_evaluation.ipynb          # Jupyter notebook for Model Evaluation & Comparison (Day 6)
 │
 ├── src/                        # Source code directory for programmatic steps
 │   ├── preprocess.py           # Preprocessing and scaling module pipeline
@@ -35,7 +37,11 @@ Heart-Disease-Prediction/
 │   ├── confusion_matrix.png        # Plotted Confusion Matrix (Logistic Regression)
 │   ├── feature_importance.png       # Plotted Coefficients (Logistic Regression)
 │   ├── decision_tree.png           # Plotted Decision Tree conditional splits
-│   └── tree_feature_importance.png # Plotted Gini Feature Importances (Decision Tree)
+│   ├── tree_feature_importance.png # Plotted Gini Feature Importances (Decision Tree)
+│   ├── random_forest_confusion_matrix.png # Plotted Confusion Matrix (Random Forest)
+│   ├── random_forest_importance.png # Plotted Gini Feature Importances (Random Forest)
+│   ├── roc_curve.png               # Plotted Receiver Operating Characteristic (ROC) comparison curves
+│   └── model_comparison_chart.png  # Plotted bar chart comparing all models side-by-side
 │
 ├── README.md                   # Project documentation
 │
@@ -71,6 +77,9 @@ jupyter notebook notebooks/heart_disease_logistic_regression.ipynb
 
 # Day 4 - Decision Tree Classifier
 jupyter notebook notebooks/heart_disease_decision_tree.ipynb
+
+# Day 6 - Model Evaluation & Comparison
+jupyter notebook notebooks/heart_disease_evaluation.ipynb
 ```
 
 To run the pipeline scripts programmatically:
