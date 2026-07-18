@@ -21,7 +21,8 @@ Heart-Disease-Prediction/
 ├── notebooks/
 │   ├── heart_disease_eda.ipynb                 # Jupyter notebook for Exploratory Data Analysis (Day 1)
 │   ├── heart_disease_preprocessing.ipynb       # Jupyter notebook for Data Preprocessing (Day 2)
-│   └── heart_disease_logistic_regression.ipynb # Jupyter notebook for Logistic Regression (Day 3)
+│   ├── heart_disease_logistic_regression.ipynb # Jupyter notebook for Logistic Regression (Day 3)
+│   └── heart_disease_decision_tree.ipynb       # Jupyter notebook for Decision Tree Classifier (Day 4)
 │
 ├── src/                        # Source code directory for programmatic steps
 │   ├── preprocess.py           # Preprocessing and scaling module pipeline
@@ -30,9 +31,11 @@ Heart-Disease-Prediction/
 ├── models/                     # Saved model artifacts
 │   └── logistic_regression_model.joblib # Saved trained model weights
 │
-├── images/                     # Saved plots and visual assets
-│   ├── confusion_matrix.png    # Plotted Confusion Matrix evaluation plot
-│   └── feature_importance.png   # Plotted Logistic Regression coefficients significance plot
+├── images/                         # Saved plots and visual assets
+│   ├── confusion_matrix.png        # Plotted Confusion Matrix (Logistic Regression)
+│   ├── feature_importance.png       # Plotted Coefficients (Logistic Regression)
+│   ├── decision_tree.png           # Plotted Decision Tree conditional splits
+│   └── tree_feature_importance.png # Plotted Gini Feature Importances (Decision Tree)
 │
 ├── README.md                   # Project documentation
 │
@@ -65,6 +68,9 @@ jupyter notebook notebooks/heart_disease_preprocessing.ipynb
 
 # Day 3 - Logistic Regression
 jupyter notebook notebooks/heart_disease_logistic_regression.ipynb
+
+# Day 4 - Decision Tree Classifier
+jupyter notebook notebooks/heart_disease_decision_tree.ipynb
 ```
 
 To run the pipeline scripts programmatically:
